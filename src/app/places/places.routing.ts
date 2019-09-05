@@ -7,7 +7,6 @@ const routes: Routes = [
     path: 'tabs',
     component: PlacesPage,
     children: [
-      { path: '', redirectTo: 'places/tabs/discover', pathMatch: 'full' },
       {
         path: 'discover',
         children: [
@@ -42,7 +41,8 @@ const routes: Routes = [
               './offers/offer-bookings/offer-bookings.module#OfferBookingsPageModule'
           }
         ]
-      }
+      },
+      { path: '', redirectTo: '/places/tabs/discover', pathMatch: 'full' }
     ]
   },
   {
